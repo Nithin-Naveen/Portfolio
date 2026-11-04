@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naveenkumar V — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Naveenkumar V, a full-stack developer building AI-powered web applications." />
+  <meta name="theme-color" content="#2f4bff" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Naveenkumar V — Full-Stack Developer" />
+  <meta property="og:description" content="Full-stack web apps with AI at the core: RAG, vision grading, chatbots and translation tools." />
+  <meta name="twitter:card" content="summary" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      var t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+    document.documentElement.classList.add("js");
+  </script>
+</head>
+<body>
+  <a class="skip" href="#work">Skip to projects</a>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Naveenkumar V, home">
+      <span class="brand-mark">NV</span>
+      <span class="brand-name">Naveenkumar V</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark theme">
+      <span class="theme-dot"></span>
+      <span class="theme-label" id="themeLabel">Dark</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero wrap">
+      <p class="eyebrow reveal"><span class="pulse"></span> Open to internships and junior roles</p>
+      <h1 class="hero-title reveal">
+        <span>Naveenkumar</span>
+        <span class="outline">V<span class="dot">.</span></span>
+      </h1>
+      <div class="hero-grid">
+        <p class="hero-lede reveal">
+          I build full-stack web apps with AI at the core: retrieval pipelines,
+          vision grading, chatbots and translation tools. Clean codebases, real
+          READMEs, and interfaces that feel designed.
+        </p>
+        <dl class="specs reveal" aria-label="Quick facts">
+          <div><dt>Focus</dt><dd>Full-stack web + AI/ML</dd></div>
+          <div><dt>Frontend</dt><dd>React, Vite, vanilla JS</dd></div>
+          <div><dt>Backend</dt><dd>Node, Express, FastAPI</dd></div>
+          <div><dt>Status</dt><dd>Student, shipping projects</dd></div>
+        </dl>
+      </div>
+      <div class="hero-cta reveal">
+        <a class="btn primary" href="#work">See my work <span aria-hidden="true">↓</span></a>
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn" id="resumeLink" href="#" hidden target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>FastAPI</span>
+        <span>PostgreSQL</span><span>MongoDB</span><span>Gemini API</span><span>Groq</span><span>RAG</span>
+        <span>JWT Auth</span><span>Tailwind</span>
+        <span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>FastAPI</span>
+        <span>PostgreSQL</span><span>MongoDB</span><span>Gemini API</span><span>Groq</span><span>RAG</span>
+        <span>JWT Auth</span><span>Tailwind</span>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <section class="wrap section" id="work">
+      <div class="section-head reveal">
+        <h2>Selected work</h2>
+        <p class="muted">Four builds. Open any row for the stack and what I shipped.</p>
+      </div>
+      <ul class="projects" id="projectList"></ul>
+    </section>
+
+    <!-- STACK -->
+    <section class="wrap section" id="stack">
+      <div class="section-head reveal">
+        <h2>Toolbox</h2>
+        <p class="muted">What I reach for, grouped by where it lives in the app.</p>
+      </div>
+      <div class="stack-grid" id="stackGrid"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="wrap section about" id="about">
+      <div class="section-head reveal">
+        <h2>About</h2>
+      </div>
+      <div class="about-body">
+        <p class="reveal">
+          I'm a student developer who likes finishing things. Each project I
+          build ships as a complete package: separate frontend and backend,
+          environment templates, seed data and documentation that someone else
+          can run on the first try.
+        </p>
+        <p class="reveal">
+          I care about the interface as much as the API. Most of my projects
+          start from a visual idea (glassmorphism for a RAG debugger, manuscript
+          paper for a translator) and the code follows from it.
+        </p>
+        <ul class="principles reveal">
+          <li><strong>Ship it whole.</strong> README, .env.example, seed script, zip.</li>
+          <li><strong>Free-tier friendly.</strong> Gemini and Groq so anyone can run it.</li>
+          <li><strong>Design matters.</strong> No default-template look.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION (shown only when EDUCATION in script.js has entries) -->
+    <section class="wrap section" id="education" hidden>
+      <div class="section-head reveal">
+        <h2>Education</h2>
+      </div>
+      <ul class="timeline" id="timeline"></ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="wrap section contact" id="contact">
+      <div class="contact-card reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Have a role or a project in mind?</h2>
+        <p class="muted">I reply to every message. Email is fastest.</p>
+        <div class="contact-actions">
+          <a class="btn primary" id="emailLink" href="mailto:your.email@example.com">your.email@example.com</a>
+          <button class="btn" id="copyEmail" type="button">Copy email</button>
+        </div>
+        <ul class="socials" id="socials"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="year"></span> Naveenkumar V</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
