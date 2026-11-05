@@ -34,6 +34,7 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
       <a href="#stack">Stack</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
@@ -102,6 +103,31 @@
       <div class="stack-grid" id="stackGrid"></div>
     </section>
 
+    <!-- ACHIEVEMENTS + INTERNSHIPS -->
+    <div class="credentials wrap">
+      <section class="section credentials-column" id="achievements" hidden>
+        <div class="section-head reveal">
+          <h2>Achievements</h2>
+        </div>
+        <ul class="timeline" id="achievementList"></ul>
+      </section>
+
+      <section class="section credentials-column" id="experience" hidden>
+        <div class="section-head reveal">
+          <h2>Internships</h2>
+        </div>
+        <ul class="timeline" id="experienceList"></ul>
+      </section>
+    </div>
+
+    <!-- EDUCATION (shown only when EDUCATION in script.js has entries) -->
+    <section class="wrap section" id="education" hidden>
+      <div class="section-head reveal">
+        <h2>Education</h2>
+      </div>
+      <ul class="timeline" id="timeline"></ul>
+    </section>
+
     <!-- ABOUT -->
     <section class="wrap section about" id="about">
       <div class="section-head reveal">
@@ -127,14 +153,6 @@
       </div>
     </section>
 
-    <!-- EDUCATION (shown only when EDUCATION in script.js has entries) -->
-    <section class="wrap section" id="education" hidden>
-      <div class="section-head reveal">
-        <h2>Education</h2>
-      </div>
-      <ul class="timeline" id="timeline"></ul>
-    </section>
-
     <!-- CONTACT -->
     <section class="wrap section contact" id="contact">
       <div class="contact-card reveal">
@@ -142,7 +160,7 @@
         <h2>Have a role or a project in mind?</h2>
         <p class="muted">I reply to every message. Email is fastest.</p>
         <div class="contact-actions">
-          <a class="btn primary" id="emailLink" href="mailto:naveenkumar57v@gmail.com">naveenkumar57v@gmail.com</a>
+          <a class="btn primary" id="emailLink" href="mailto:your.email@example.com">your.email@example.com</a>
           <button class="btn" id="copyEmail" type="button">Copy email</button>
         </div>
         <ul class="socials" id="socials"></ul>

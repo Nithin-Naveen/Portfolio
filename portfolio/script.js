@@ -1,14 +1,12 @@
-/* ==========================================================
-   EDIT THIS SECTION: all your content lives here.
-   ========================================================== */
+
 
 const PROFILE = {
-  email: "your.email@example.com", // <- put your real email
-  resume: "", // e.g. "resume.pdf" (put the file in this folder). Empty = button hidden
+  email: "naveenkumar57v@gmail.com",
+  resume: "resume.pdf",
   socials: [
     { label: "GitHub", url: "https://github.com/Nithin-Naveen" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/naveenkumar-v-b2748b39a/" },
-    // { label: "Resume", url: "resume.pdf" },
+   
   ],
 };
 
@@ -26,7 +24,7 @@ const PROJECTS = [
     ],
     stack: ["React", "Vite", "Tailwind", "FastAPI", "PostgreSQL", "Gemini Vision", "JWT"],
     links: [
-      // { label: "Source", url: "https://github.com/your-username/oniongrade-ai" },
+     
     ],
   },
   {
@@ -71,9 +69,69 @@ const PROJECTS = [
   },
 ];
 
+// Leave empty to hide the Achievements section.
+// Newest first. "link" is optional (certificate, post or repo URL).
+const ACHIEVEMENTS = [
+  {
+    title: "Infosys Springboard Certification",
+    place: "Infosys Springboard",
+    period: "",
+    note: "Earned certification in industry-relevant technical skills.",
+    link: "",
+  },
+  {
+    title: "Cisco Networking Academy Certification",
+    place: "Cisco Networking Academy",
+    period: "",
+    note: "Certified in networking fundamentals and related technologies.",
+    link: "",
+  },
+  {
+    title: "Technical Workshops",
+    place: "",
+    period: "",
+    note: "Participated in multiple technical workshops enhancing practical knowledge and hands-on skills.",
+    link: "",
+  },
+  {
+    title: "NPTEL Certification - Database Management System",
+    place: "National Programme on Technology Enhanced Learning (NPTEL)",
+    period: "",
+    note: "Successfully completed the Database Management System certification.",
+    link: "",
+  },
+];
+
 // Leave empty to hide the Education section. Example entry:
 // { title: "B.E. Computer Science", place: "Your College", period: "2023 – 2027", note: "AI/ML coursework" }
 const EDUCATION = [];
+
+const EXPERIENCE = [
+  {
+    title: "Full Stack Development Intern",
+    place: "BIG-SI-BUCKS INNOVATION PRIVATE LIMITED",
+    period: "1 month",
+    note: "",
+  },
+  {
+    title: "Web Development Intern",
+    place: "CodeBind Technologies, Chennai",
+    period: "15 days",
+    note: "",
+  },
+  {
+    title: "Full Stack Web Development Intern",
+    place: "Pantech e-Learning Pvt. Ltd",
+    period: "1 month",
+    note: "",
+  },
+  {
+    title: "Artificial Intelligence Intern",
+    place: "Yinolite Solution",
+    period: "1 month",
+    note: "",
+  },
+];
 
 const STACK = [
   { title: "Frontend", items: ["React", "Vite", "HTML / CSS / JS", "Tailwind CSS", "Recharts"] },
@@ -174,6 +232,45 @@ function renderStack() {
   });
 }
 
+/* Achievements */
+function renderAchievements() {
+  if (!ACHIEVEMENTS.length) return;
+  const list = $("#achievementList");
+  ACHIEVEMENTS.forEach((a) => {
+    const li = el("li", "timeline-item reveal");
+    li.append(el("span", "timeline-period", a.period || ""));
+    const body = el("div");
+    body.append(el("h3", null, a.title), el("p", "muted", a.place));
+    if (a.note) body.append(el("p", null, a.note));
+    if (a.link) {
+      const l = el("a", "ach-link", "View ↗");
+      l.href = a.link;
+      l.target = "_blank";
+      l.rel = "noopener noreferrer";
+      body.append(l);
+    }
+    li.append(body);
+    list.append(li);
+  });
+  $("#achievements").hidden = false;
+}
+
+/* Internships */
+function renderExperience() {
+  if (!EXPERIENCE.length) return;
+  const list = $("#experienceList");
+  EXPERIENCE.forEach((e) => {
+    const li = el("li", "timeline-item reveal");
+    li.append(el("span", "timeline-period", e.period || ""));
+    const body = el("div");
+    body.append(el("h3", null, e.title), el("p", "muted", e.place));
+    if (e.note) body.append(el("p", null, e.note));
+    li.append(body);
+    list.append(li);
+  });
+  $("#experience").hidden = false;
+}
+
 /* Education + resume (both stay hidden until you fill them in) */
 function renderExtras() {
   if (PROFILE.resume) {
@@ -267,6 +364,8 @@ function initReveal() {
 renderProjects();
 renderStack();
 renderExtras();
+renderAchievements();
+renderExperience();
 renderContact();
 initTheme();
 initReveal();
