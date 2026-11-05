@@ -6,8 +6,8 @@ const PROFILE = {
   email: "your.email@example.com", // <- put your real email
   resume: "", // e.g. "resume.pdf" (put the file in this folder). Empty = button hidden
   socials: [
-    { label: "GitHub", url: "https://github.com/your-username" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/in/your-username" },
+    { label: "GitHub", url: "https://github.com/Nithin-Naveen" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/naveenkumar-v-b2748b39a/" },
     // { label: "Resume", url: "resume.pdf" },
   ],
 };
